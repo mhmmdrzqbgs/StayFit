@@ -1,0 +1,33 @@
+html, body {
+  height: 100%;
+  margin: 0; 
+}
+
+.form-signup {
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signup .form-floating:focus-within {
+  z-index: 3;
+}
+
+.form-signup input[type="email"],
+.form-signup input[type="password"],
+.form-signup input[type="confirmpassword"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.form-signup input[type="password"]:focus,
+.form-signup input[type="confirmpassword"]:focus {
+  margin-bottom: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

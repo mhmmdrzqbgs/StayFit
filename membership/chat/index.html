@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/picture/styft.png" type="png">
+    <title>StayFit Consultation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="chat.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-xl navbar bg-danger navbar-dark" aria-label="Sixth navbar example">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../home/index.html">
+                        <img src="../assets/picture/stayfit.png" alt="StayFit Logo" style="max-height: 50px; max-width: 150px;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarsExample06" aria-controls="navbarsExample06" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarsExample06">
+                        <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../home/index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="../consul/index.html">Consultation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../about/index.html">About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Health Tips</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Mental Health</a></li>
+                                    <li><a class="dropdown-item" href="#">Benefits of Waking Up Early</a></li>
+                                    <li><a class="dropdown-item" href="#">Overcoming Stress</a></li>
+                                    <li><a class="dropdown-item" href="../health-tips/index.html">More...</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../profile/index.html">Profile</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <main class="container mt-4">
+                <div class="row">
+                    <!-- Left sidebar with available doctors -->
+                    <!-- Left sidebar with available doctors -->
+                    <div class="col-md-3 order-md-1">
+                        <div class="chat-sidebar">
+                            <h2>Available Doctors</h2>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="d-flex align-items-center">
+                                        <img src="../assets/picture/dok2.jpg" alt="Dr. Smith" class="rounded-circle me-2"
+                                            style="width: 40px; height: 40px;">
+                                        <span>Dr.Hiriluk</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex align-items-center">
+                                        <img src="../assets/picture/dok3.jpg" alt="Dr. Johnson" class="rounded-circle me-2"
+                                            style="width: 40px; height: 40px;">
+                                        <span>Dr.Marco</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex align-items-center">
+                                        <img src="../assets/picture/dok4.jpg" alt="Dr. Davis" class="rounded-circle me-2"
+                                            style="width: 40px; height: 40px;">
+                                        <span>Dr.Crocus</span>
+                                    </div>
+                                </li>
+                                <!-- Add more doctors as needed -->
+                            </ul>
+                        </div>
+                    </div>
+                
+
+
+                    <!-- Chat container -->
+                    <div class="col-md-9 order-md-2">
+                        <!-- Profile section -->
+                        <div class="profile-section d-flex align-items-center mb-4">
+                            <img src="../assets/picture/dok1.jpg" alt="Recipient Profile" class="rounded-circle me-3">
+                            <div>
+                                <h4>Dr.Kureha</h4>
+                                <p>Spesialis Pencernaan</p>
+                            </div>
+                        </div>
+
+                        <!-- Chat messages area -->
+                        <div id="chat-messages" class="chat-messages border-bottom pb-3 mb-3">
+                            <div class="chat-bubble received bg-light p-2 rounded">
+                                <p>Hello there!</p>
+                            </div>
+                            <div class="chat-bubble sent bg-success text-white p-2 rounded">
+                                <p>Hi! How can I help you?</p>
+                            </div>
+                            <!-- Messages will be displayed here -->
+                        </div>
+
+                        <!-- Chat input area -->
+                        <div class="chat-input d-flex">
+                            <input type="text" id="message-input" class="flex-grow-1 me-2 p-2"
+                                placeholder="Type your message...">
+                            <button onclick="sendMessage()" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-3 my-4">
+        <div class="container">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a>
+                </li>
+            </ul>
+            <p class="text-center text-body-secondary">&copy; 2023 StayFit, TI UMK</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+    <script src="../assets/js/c-script.js"></script>
+</body>
+
+</html>

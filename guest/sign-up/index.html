@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <script src="../../assets/js/color-modes.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../assets/picture/styft.png" type="png">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.118.2">
+  <title>Sign-up</title>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+  <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="sign-up.css" rel="stylesheet">
+</head>
+
+<body class="d-flex align-items-center py-4 bg-body-tertiary" style="background-color: #f8fcfb;">
+  <main class="form-signup w-100 m-auto text-center">
+    <img src="../../assets/picture/stayfit.png" class="img-fluid rounded" style="max-width: 150px; max-height: 150px;">
+    <form>
+      <h3 class="h3 mb-3 fw-normal">Create Account</h3>
+      <div class="form-floating">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+        <label for="confirmPassword">Confirm Password</label>
+      </div>
+      <button class="btn w-100 py-2 mb-3 btn-primary" type="button"
+        onclick="validatePassword(); window.location.href='../home/index.html'">Sign up</button>
+      <a href="../sign-in/index.html">Already have an account?</a>
+      <p class="mt-5 mb-3 text-body-secondary">&copy; StayFit 2023</p>
+    </form>
+  </main>
+  <script>
+    function validatePassword() {
+      var password = document.getElementById("floatingPassword").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      if (password != confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+      }
+    }
+
+    document.getElementById("signInButton").addEventListener("click", function () {
+      window.location.href = "../../user/home/index.html";
+    });
+  </script>
+  <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
